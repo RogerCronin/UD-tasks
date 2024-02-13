@@ -12,26 +12,9 @@ Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
 PASS src/functions.test.ts
-FAIL src/arrays.test.ts
-  ● Testing the array functions › Testing the allRGB function
-
-    expect(received).toEqual(expected) // deep equality
-
-    Expected: true
-    Received: false
-
-      238 |
-      239 |     test("Testing the allRGB function", () => {
-    > 240 |         expect(allRGB(COLORS_1)).toEqual(true);
-          |                                  ^
-      241 |         expect(allRGB(COLORS_2)).toEqual(true);
-      242 |         expect(allRGB(COLORS_3)).toEqual(true);
-      243 |         expect(allRGB(COLORS_4)).toEqual(false);
-
-      at Object.<anonymous> (src/arrays.test.ts:240:34)
-
-PASS src/text.test.tsx
+PASS src/arrays.test.ts
 PASS src/HtmlCss.test.tsx
+PASS src/text.test.tsx
 PASS src/App.test.tsx
 --------------|---------|----------|---------|---------|-------------------
 File          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
@@ -42,8 +25,8 @@ All files     |     100 |      100 |     100 |     100 |
  functions.ts |     100 |      100 |     100 |     100 |                   
 --------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 1 failed, 4 passed, 5 total
-Tests:       1 failed, 22 passed, 23 total
+Test Suites: 5 passed, 5 total
+Tests:       23 passed, 23 total
 Snapshots:   0 total
-Time:        3.012 s
+Time:        3.032 s
 Ran all test suites.
