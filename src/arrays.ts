@@ -64,10 +64,8 @@ export function countShortWords(words: string[]): number {
  */
 export function allRGB(colors: string[]): boolean {
     return colors.reduce(
-        // typescript really doesn't like this function for some reason
-        (acc: boolean, c: string) => (
-            (acc = c === "red" || c === "blue" || c === "green"), false
-        ),
+        (acc: boolean, c: string) =>
+            acc && (c === "red" || c === "blue" || c === "green"),
         true
     );
 }
