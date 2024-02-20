@@ -13,60 +13,28 @@ Browserslist: caniuse-lite is outdated. Please run:
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
 PASS src/objects.test.ts
 PASS src/arrays.test.ts
-FAIL src/nested.test.ts
-  ● Testing the Question[] functions › Testing the editOption function
-
-    TypeError: q.options.toSpliced is not a function
-
-      203 |             return {
-      204 |                 ...q,
-    > 205 |                 options: q.options.toSpliced(
-          |                                    ^
-      206 |                     targetOptionIndex === -1
-      207 |                         ? q.options.length
-      208 |                         : targetOptionIndex,
-
-      at map (src/nested.ts:205:36)
-          at Array.map (<anonymous>)
-      at editOption (src/nested.ts:201:22)
-      at Object.<anonymous> (src/nested.test.ts:897:16)
-
-  ● Testing the Question[] functions › Testing the duplicateQuestionInArray function
-
-    TypeError: questions.toSpliced is not a function
-
-      228 | ): Question[] {
-      229 |     const index = questions.findIndex((q) => q.id === targetId);
-    > 230 |     return questions.toSpliced(
-          |                      ^
-      231 |         index + 1,
-      232 |         0,
-      233 |         duplicateQuestion(newId, questions[index])
-
-      at duplicateQuestionInArray (src/nested.ts:230:22)
-      at Object.<anonymous> (src/nested.test.ts:1091:16)
-
 PASS src/functions.test.ts
+PASS src/nested.test.ts
+PASS src/HtmlCss.test.tsx
 PASS src/App.test.tsx
 PASS src/text.test.tsx
-PASS src/HtmlCss.test.tsx
 ----------------|---------|----------|---------|---------|-------------------
 File            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------|---------|----------|---------|---------|-------------------
-All files       |   98.95 |    96.36 |     100 |   98.71 |                   
- src            |   98.95 |    96.36 |     100 |   98.71 |                   
+All files       |     100 |      100 |     100 |     100 |                   
+ src            |     100 |      100 |     100 |     100 |                   
   App.tsx       |     100 |      100 |     100 |     100 |                   
   arrays.ts     |     100 |      100 |     100 |     100 |                   
   functions.ts  |     100 |      100 |     100 |     100 |                   
-  nested.ts     |   97.36 |    89.47 |     100 |   96.55 | 214               
+  nested.ts     |     100 |      100 |     100 |     100 |                   
   objects.ts    |     100 |      100 |     100 |     100 |                   
  src/interfaces |       0 |        0 |       0 |       0 |                   
   answer.ts     |       0 |        0 |       0 |       0 |                   
   question.ts   |       0 |        0 |       0 |       0 |                   
 ----------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 1 failed, 6 passed, 7 total
-Tests:       2 failed, 47 passed, 49 total
+Test Suites: 7 passed, 7 total
+Tests:       49 passed, 49 total
 Snapshots:   0 total
-Time:        3.858 s
+Time:        3.883 s
 Ran all test suites.
