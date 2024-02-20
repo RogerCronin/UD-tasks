@@ -200,15 +200,15 @@ export function editOption(
 ): Question[] {
     return questions.map((q) => {
         if (q.id === targetId) {
+            const newOptions = [...q.options];
+            newOptions.splice(
+                targetOptionIndex === -1 ? q.options.length : targetOptionIndex,
+                1,
+                newOption
+            );
             return {
                 ...q,
-                options: q.options.toSpliced(
-                    targetOptionIndex === -1
-                        ? q.options.length
-                        : targetOptionIndex,
-                    1,
-                    newOption
-                )
+                options: newOptions
             };
         }
         return { ...q };
@@ -227,9 +227,11 @@ export function duplicateQuestionInArray(
     newId: number
 ): Question[] {
     const index = questions.findIndex((q) => q.id === targetId);
-    return questions.toSpliced(
+    const newQuestions = [...questions];
+    newQuestions.splice(
         index + 1,
         0,
         duplicateQuestion(newId, questions[index])
     );
+    return newQuestions;
 }
