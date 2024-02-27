@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 export function RevealAnswer(): JSX.Element {
     const [isRevealed, setIsRevealed] = useState<boolean>(false);
 
-    function toggleIsRevealed() {
+    function toggleIsRevealed(): void {
         setIsRevealed(!isRevealed);
     }
 

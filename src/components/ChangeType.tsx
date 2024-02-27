@@ -7,7 +7,7 @@ export function ChangeType(): JSX.Element {
         "short_answer_question"
     );
 
-    function switchQuestionType() {
+    function switchQuestionType(): void {
         setQuestionType(
             questionType === "short_answer_question"
                 ? "multiple_choice_question"
